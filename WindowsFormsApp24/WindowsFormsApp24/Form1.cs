@@ -6,13 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp24
 {
     public partial class Form1 : Form
     {
-      
+        int[] array = new int[35];
+        double sr = 0, count = 0;
         public Form1()
         {
             InitializeComponent();
@@ -33,17 +35,16 @@ namespace WindowsFormsApp24
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Random_Click(object sender, EventArgs e)
         {
-            dataGridView1.RowCount = 1; // Количество строк, отображаемых в объекте DataGridView.
-            dataGridView1.ColumnCount = 36; // Число столбцов, отображаемых в объекте DataGridView.
-            Random rnd = new Random();
-            for (int i = 0; i < 36; i++)
-            {
-                dataGridView1.Rows[0].Cells[i].Value = rnd.Next(0, 50);
-                dataGridView1.Rows[0].Cells[i].Value = i;
-            }
+            dataGridView1.ColumnCount = 35; // The number of columns displayed in the DataGridView object.
+            Random rnd = new Random(); // Random array
+            for (int i = 0; i < array.Length; i++)
 
+            {
+                array[i] = rnd.Next(-50, 50); // Borders of a random array
+                dataGridView1.Rows[0].Cells[i].Value = array[i];
+            }
 
 
         }
@@ -53,10 +54,175 @@ namespace WindowsFormsApp24
 
         }
 
-        private void Button4_Click(object sender, EventArgs e)
+        private void Сlearing_Click(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < array.Length; i++)
+            {
+                dataGridView1.Rows[0].Cells[i].Value = " ";
+                label2.Text = " ";
+                label3.Text = " ";
+            }
         }
 
+        private void Graph_Click(object sender, EventArgs e)
+        {
+            int[] x = array;
+            int[] y = new int[35];
+            for (int i = 0; i < 35; i++)
+
+            {
+
+                y[i] = array[i];
+                x[i] = i;
+                chart1.ChartAreas[0].AxisY.MajorGrid.Interval = 1;
+                chart1.ChartAreas[0].AxisX.MajorGrid.Interval = 2;
+                chart1.Series[0].Points.DataBindXY(x, y);
+
+            }
+        }
+
+        private void File_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+                StreamReader file = new StreamReader(@"C:\\num.txt");
+                string[] n = file.ReadToEnd().Split('\n');
+                for (int i = 0; i < 35; i++)
+
+                {
+
+                    dataGridView1.Rows[0].Cells[i].Value = n[i];
+                    array[i] = Convert.ToInt32(n[i]);
+
+                }
+
+            }
+
+            catch (FileNotFoundException)
+
+            {
+
+                MessageBox.Show("File not found!");
+
+            }
+            catch (FormatException)
+
+
+            {
+
+                MessageBox.Show("Incorrect format!");
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("The file is empty");
+
+            }
+        }
+
+
+
+        private void Transition_Click(object sender, EventArgs e)
+        {
+            Form2 newform = new Form2(); //Form2 - new form
+            newform.Show();
+
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            {
+                DialogResult dialog = MessageBox.Show
+               (
+                 "Вы действительно хотите выйти из программы?",
+                 "Завершение программы",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning
+                );
+                if (dialog == DialogResult.Yes) // Return value of the dialog box
+                {
+                    this.Close(); // Exit application
+
+                }
+            }
+        }
+
+        private void Task_Click(object sender, EventArgs e)
+        {
+            int temp = 0;
+            for (int i = 0; i < 35; i++)
+            {
+
+                if (array[i] < 0)
+                {
+                    sr += array[i];
+                    count++;
+                }
+
+            }
+            for (int j = 0; j < 20; j++)
+            {
+                if (array[j] > 0)
+                    temp++;
+            }
+
+            label3.Text = "Количество положительных элементов:" + temp;
+            label2.Text = "Среднее арифметическое отрицательных элементов :" + Math.Round(sr / count, 3);
+        }
+
+
+
+        private void Sort1_Click(object sender, EventArgs e)
+        {
+            int temp; // Descending sort
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i; j < array.Length; j++)
+                {
+                    if (array[i] < array[j])
+                    {
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+
+                dataGridView1.Rows[0].Cells[i].Value = array[i];
+            }
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sort2_Click(object sender, EventArgs e)
+        {
+
+            int temp; //Ascending sort
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i; j < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+
+                dataGridView1.Rows[0].Cells[i].Value = array[i];
+            }
+        }
     }
 }
+     
+
