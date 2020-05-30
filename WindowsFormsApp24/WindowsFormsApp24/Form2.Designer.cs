@@ -44,6 +44,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Главная форма";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // checkBox1
@@ -56,6 +57,7 @@
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Послание от разработчика";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseWaitCursor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
             // checkBox2
@@ -68,6 +70,7 @@
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Справка";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseWaitCursor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
             // 
             // textBox1
@@ -83,7 +86,6 @@
     "48\r\n48 the best!\r\n4 Penza One Love";
             this.textBox1.UseWaitCursor = true;
             this.textBox1.Visible = false;
-           
             // 
             // textBox2
             // 
@@ -97,7 +99,6 @@
             this.textBox2.Text = "This program is designed for processing a one-dimensional array";
             this.textBox2.UseWaitCursor = true;
             this.textBox2.Visible = false;
-            
             // 
             // Form2
             // 
@@ -111,7 +112,7 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
-            this.Text = "Многофункциональное приложение для обработки массива (Аброськина)";
+            this.Text = "Многооконное приложение для обработки массива_Аброськина";
             this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();

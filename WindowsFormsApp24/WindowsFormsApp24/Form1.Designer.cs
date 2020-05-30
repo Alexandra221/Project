@@ -470,7 +470,7 @@
             this.Controls.Add(this.chart1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.Text = "Многофункциональное приложение для обработки массива (Аброськина) ";
+            this.Text = "Многооконное приложение для обработки массива _Аброськина";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
