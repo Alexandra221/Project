@@ -45,7 +45,7 @@
             this.button1.Text = "Главная форма";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Click += new System.EventHandler(this.Main_form_Click);
             // 
             // checkBox1
             // 
@@ -58,7 +58,7 @@
             this.checkBox1.Text = "Послание от разработчика";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.UseWaitCursor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.Developer_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -71,7 +71,7 @@
             this.checkBox2.Text = "Справка";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.UseWaitCursor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.Reference_CheckedChanged);
             // 
             // textBox1
             // 

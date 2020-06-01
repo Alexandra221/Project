@@ -17,20 +17,21 @@ namespace WindowsFormsApp24
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Main_form_Click(object sender, EventArgs e)
         {
 
 
             {
 
-                Form1 newform = new Form1(); //Form1 - main form
-                newform.Show();
+                Form2.ActiveForm.Hide();
+                Form1 f2 = new Form1();
+                f2.Show();
 
             }
         }
 
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        private void Developer_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
                 textBox1.Show();
@@ -39,7 +40,7 @@ namespace WindowsFormsApp24
           
         }
 
-        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        private void Reference_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked == true)
                 textBox2.Show();

@@ -100,7 +100,7 @@
             this.chart1.Size = new System.Drawing.Size(478, 218);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.Chart1_Click);
+           
             // 
             // button1
             // 
@@ -222,7 +222,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 63);
             this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
+          
             // 
             // Column1
             // 
@@ -471,7 +471,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Многооконное приложение для обработки массива _Аброськина";
-            this.Load += new System.EventHandler(this.Form1_Load);
+       
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

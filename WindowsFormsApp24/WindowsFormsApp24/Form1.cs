@@ -20,20 +20,6 @@ namespace WindowsFormsApp24
             InitializeComponent();
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Chart1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Random_Click(object sender, EventArgs e)
         {
@@ -49,10 +35,6 @@ namespace WindowsFormsApp24
 
         }
 
-        private void DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void Сlearing_Click(object sender, EventArgs e)
         {
@@ -122,13 +104,12 @@ namespace WindowsFormsApp24
             }
         }
 
-
-
         private void Transition_Click(object sender, EventArgs e)
         {
-            Form2 newform = new Form2(); //Form2 - new form
-            newform.Show();
 
+            Form1.ActiveForm.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -173,56 +154,35 @@ namespace WindowsFormsApp24
         }
 
 
-
         private void Sort1_Click(object sender, EventArgs e)
         {
-            int temp; // Descending sort
+            // Descending sort
+            Array.Reverse(array);
             for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = i; j < array.Length; j++)
-                {
-                    if (array[i] < array[j])
-                    {
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-                    }
-                }
 
                 dataGridView1.Rows[0].Cells[i].Value = array[i];
-            }
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Sort2_Click(object sender, EventArgs e)
         {
 
-            int temp; //Ascending sort
+            //Ascending sort
+            Array.Sort(array);
+
             for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = i; j < array.Length; j++)
-                {
-                    if (array[i] > array[j])
-                    {
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-                    }
-                }
 
                 dataGridView1.Rows[0].Cells[i].Value = array[i];
-            }
+
+          }
+
         }
     }
-}
+        
+
+
+    
+
      
 
