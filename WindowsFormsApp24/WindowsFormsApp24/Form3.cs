@@ -10,26 +10,24 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp24
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void Main_form_Click(object sender, EventArgs e)
+        private void Main_Click(object sender, EventArgs e)
         {
-
-
             {
 
-                Form2.ActiveForm.Hide();
-                Form1 f2 = new Form1();
-                f2.Show();
+                Form3.ActiveForm.Hide();
+                Form1 f3 = new Form1();
+                f3.Show();
 
             }
         }
 
-        
+       
     }
 }

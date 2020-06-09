@@ -23,12 +23,12 @@ namespace WindowsFormsApp24
 
         private void Random_Click(object sender, EventArgs e)
         {
-            dataGridView1.ColumnCount = 35; // The number of columns displayed in the DataGridView object.
-            Random rnd = new Random(); // Random array
+            dataGridView1.ColumnCount = 35; // Количество столбцов, отображаемых в объекте DataGridView.
+            Random rnd = new Random(); // Рандомный массив
             for (int i = 0; i < array.Length; i++)
 
             {
-                array[i] = rnd.Next(-50, 50); // Borders of a random array
+                array[i] = rnd.Next(-50, 50); // Границы случайного массива
                 dataGridView1.Rows[0].Cells[i].Value = array[i];
             }
 
@@ -36,7 +36,7 @@ namespace WindowsFormsApp24
         }
 
 
-        private void Сlearing_Click(object sender, EventArgs e)
+        private void Сlearing_Click(object sender, EventArgs e) //Очистка массива
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -46,7 +46,7 @@ namespace WindowsFormsApp24
             }
         }
 
-        private void Graph_Click(object sender, EventArgs e)
+        private void Graph_Click(object sender, EventArgs e)// График 
         {
             int[] x = array;
             int[] y = new int[35];
@@ -63,7 +63,7 @@ namespace WindowsFormsApp24
             }
         }
 
-        private void File_Click(object sender, EventArgs e)
+        private void File_Click(object sender, EventArgs e) // Ввод массива из файла
         {
             try
 
@@ -81,7 +81,7 @@ namespace WindowsFormsApp24
 
             }
 
-            catch (FileNotFoundException)
+            catch (FileNotFoundException) //Исключения
 
             {
 
@@ -122,9 +122,9 @@ namespace WindowsFormsApp24
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Warning
                 );
-                if (dialog == DialogResult.Yes) // Return value of the dialog box
+                if (dialog == DialogResult.Yes) // Возвращение значения диалогового окна
                 {
-                    this.Close(); // Exit application
+                    this.Close(); // Закрытие приложения
 
                 }
             }
@@ -132,7 +132,7 @@ namespace WindowsFormsApp24
 
         private void Task_Click(object sender, EventArgs e)
         {
-            int temp = 0;
+            int temp = 0;// Нахождение среднего арифметического отрицательных элементов массива
             for (int i = 0; i < 35; i++)
             {
 
@@ -143,7 +143,7 @@ namespace WindowsFormsApp24
                 }
 
             }
-            for (int j = 0; j < 20; j++)
+            for (int j = 0; j < 20; j++)// Количество положительных чисел массива до 20
             {
                 if (array[j] > 0)
                     temp++;
@@ -156,7 +156,7 @@ namespace WindowsFormsApp24
 
         private void Sort1_Click(object sender, EventArgs e)
         {
-            // Descending sort
+            // Сортировка по убыванию
             Array.Reverse(array);
             for (int i = 0; i < array.Length; i++)
 
@@ -164,11 +164,39 @@ namespace WindowsFormsApp24
 
         }
 
+        private void ToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            {
+
+                Form1.ActiveForm.Hide();
+
+                Form2 f2 = new Form2();
+
+                f2.Show();
+
+            }
+        }
+
+        private void ToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            {
+
+                Form1.ActiveForm.Hide();
+                Form3 f3 = new Form3();
+                f3.Show();
+
+            }
+        }
+
+        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
 
         private void Sort2_Click(object sender, EventArgs e)
         {
 
-            //Ascending sort
+            // Сортировка по возрастанию
             Array.Sort(array);
 
             for (int i = 0; i < array.Length; i++)
