@@ -17,7 +17,20 @@ namespace WindowsFormsApp24
             InitializeComponent();
         }
 
-        private void Main_Click(object sender, EventArgs e)
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+            {
+
+                Form3.ActiveForm.Hide();
+                Form2 f2 = new Form2();
+                f2.Show();
+
+            }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
             {
 
@@ -26,8 +39,7 @@ namespace WindowsFormsApp24
                 f3.Show();
 
             }
-        }
 
-       
+        }
     }
 }

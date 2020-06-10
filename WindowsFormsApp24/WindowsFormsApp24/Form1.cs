@@ -68,7 +68,7 @@ namespace WindowsFormsApp24
             try
 
             {
-                StreamReader file = new StreamReader(@"C:\\num.txt");
+                StreamReader file = new StreamReader(@"C:\\file.txt");
                 string[] n = file.ReadToEnd().Split('\n');
                 for (int i = 0; i < 35; i++)
 

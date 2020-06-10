@@ -38,7 +38,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -142,7 +141,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(303, 259);
+            this.button5.Location = new System.Drawing.Point(301, 258);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(155, 33);
             this.button5.TabIndex = 6;
@@ -166,22 +165,11 @@
             this.button7.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.Location = new System.Drawing.Point(367, 188);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(155, 56);
+            this.button7.Size = new System.Drawing.Size(347, 56);
             this.button7.TabIndex = 8;
             this.button7.Text = "Завершение работы";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(367, 118);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(155, 56);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Переход на другую форму";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Transition_Click);
             // 
             // dataGridView1
             // 
@@ -405,9 +393,9 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(642, 188);
+            this.button9.Location = new System.Drawing.Point(367, 129);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(95, 53);
+            this.button9.Size = new System.Drawing.Size(160, 53);
             this.button9.TabIndex = 11;
             this.button9.Text = "По возрастанию";
             this.button9.UseVisualStyleBackColor = true;
@@ -416,9 +404,9 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(540, 188);
+            this.button10.Location = new System.Drawing.Point(554, 129);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 53);
+            this.button10.Size = new System.Drawing.Size(160, 53);
             this.button10.TabIndex = 12;
             this.button10.Text = "По убыванию";
             this.button10.UseVisualStyleBackColor = true;
@@ -427,9 +415,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(613, 161);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(493, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(96, 22);
             this.label1.TabIndex = 13;
             this.label1.Text = "Сортировка";
             // 
@@ -497,7 +486,6 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -527,7 +515,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

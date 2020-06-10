@@ -24,12 +24,22 @@ namespace WindowsFormsApp24
             {
 
                 Form2.ActiveForm.Hide();
-                Form1 f2 = new Form1();
-                f2.Show();
+                Form1 f1 = new Form1();
+                f1.Show();
 
             }
         }
 
-        
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+            {
+
+                Form2.ActiveForm.Hide();
+                Form3 f3 = new Form3();
+                f3.Show();
+
+            }
+        }
     }
 }
