@@ -23,15 +23,15 @@ namespace WindowsFormsApp24
 
         private void Random_Click(object sender, EventArgs e)
         {
+
             dataGridView1.ColumnCount = 35; // Количество столбцов, отображаемых в объекте DataGridView.
             Random rnd = new Random(); // Рандомный массив
             for (int i = 0; i < array.Length; i++)
 
             {
                 array[i] = rnd.Next(-50, 50); // Границы случайного массива
-                dataGridView1.Rows[0].Cells[i].Value = array[i];
+                dataGridView1.Rows[0].Cells[i].Value = array[i]; // Заполнение ячеек
             }
-
 
         }
 
@@ -68,14 +68,14 @@ namespace WindowsFormsApp24
             try
 
             {
-                StreamReader file = new StreamReader(@"C:\\file.txt");
-                string[] n = file.ReadToEnd().Split('\n');
+                StreamReader file = new StreamReader(@"C:\\file.txt"); // Объявление StreamReader
+                string[] n = file.ReadToEnd().Split('\n'); // Чтение данных из файла
                 for (int i = 0; i < 35; i++)
 
                 {
 
-                    dataGridView1.Rows[0].Cells[i].Value = n[i];
-                    array[i] = Convert.ToInt32(n[i]);
+                    dataGridView1.Rows[0].Cells[i].Value = n[i]; // Заполнение ячеек
+                    array[i] = Convert.ToInt32(n[i]); // Заполнение массива 
 
                 }
 
@@ -85,7 +85,7 @@ namespace WindowsFormsApp24
 
             {
 
-                MessageBox.Show("File not found!");
+                MessageBox.Show("File not found!"); // Исключение при отсутствии файла
 
             }
             catch (FormatException)
@@ -93,13 +93,13 @@ namespace WindowsFormsApp24
 
             {
 
-                MessageBox.Show("Incorrect format!");
+                MessageBox.Show("Incorrect format!"); // Не верный формат файла
 
             }
             catch (Exception)
             {
 
-                MessageBox.Show("The file is empty");
+                MessageBox.Show("The file is empty"); // Пустой файл
 
             }
         }
