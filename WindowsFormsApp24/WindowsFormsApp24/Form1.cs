@@ -15,6 +15,7 @@ namespace WindowsFormsApp24
     {
         int[] array = new int[35];
         double sr = 0, count = 0;
+        public const int d = 35;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace WindowsFormsApp24
         private void Random_Click(object sender, EventArgs e)
         {
 
-            dataGridView1.ColumnCount = 35; // Количество столбцов, отображаемых в объекте DataGridView.
+            dataGridView1.ColumnCount = d; // Количество столбцов, отображаемых в объекте DataGridView.
             Random rnd = new Random(); // Рандомный массив
             for (int i = 0; i < array.Length; i++)
 
